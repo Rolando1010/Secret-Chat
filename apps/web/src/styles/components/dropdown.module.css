@@ -1,0 +1,35 @@
+.dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.dropdownContent {
+    display: none;
+    position: absolute;
+    background-color: #1e162b;
+    transform: translate(-87px, 72px);
+    min-width: 150px;
+    z-index: 1;
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    border-radius: 15px;
+    padding: 10px 0;
+}
+
+.dropdown:hover .dropdownContent {
+    display: block;
+}
+
+.underLine {
+    border-top: 1px solid var(--border);
+}
+
+.dropdownContent li {
+    padding: 10px;
+}
+
+.dropdownContent li:hover {
+    background: #2e2241;
+}

@@ -1,0 +1,17 @@
+.imageContainer {
+    text-align: center;
+    margin: auto;
+}
+
+.imageBackground {
+    background-color: #272a37;
+    display: inline-block;
+    border-radius: 100%;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.imageContainer img {
+    width: 300px;
+    max-width: 90%;
+}

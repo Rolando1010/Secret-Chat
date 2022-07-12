@@ -1,0 +1,35 @@
+.input {
+    width: 100%;
+    display: block;
+    position: relative;
+    margin: 20px 0;
+    box-sizing: border-box;
+    color: var(--font-2);
+    padding: 35px 15px 10px 19px;
+    border-radius: 15px;
+    background-color: var(--background-1);
+    border: 2px solid transparent;
+}
+
+.input span {
+    position: absolute;
+    top: 55%;
+    transform: translateY(-150%) scale(1);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.input input {
+    background-color: transparent;
+    border-color: transparent;
+    outline: none;
+    font-size: 16px;
+    color: var(--font-1);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+label.input:focus-within{
+    border: 2px solid #1d90f5;
+    color: #1d90f5;
+}

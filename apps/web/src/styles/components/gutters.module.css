@@ -1,0 +1,10 @@
+.gutterContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 800px){
+    .gutter {
+        width: 100% !important;
+    }
+}

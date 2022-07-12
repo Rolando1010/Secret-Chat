@@ -1,0 +1,52 @@
+.menu {
+    border-bottom: var(--border) 1px solid;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.siteLink a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--font-1);
+}
+
+.menu h2 {
+    margin: 0;
+    display: inline-block;
+}
+
+.menu img {
+    width: 40px;
+    margin-right: 5px;
+}
+
+.menu .siteLink, .menu .accountLinks {
+    display: flex;
+    align-items: center;
+}
+
+.accountLinks a {
+    color: var(--font-2);
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.accountLinks a:visited {
+    color: var(--font-2);
+}
+
+.accountLinks a:hover {
+    color: var(--font-1);
+}
+
+.userSection img {
+    height: 40px;
+}
+
+.userSection p{
+    margin: 0;
+}

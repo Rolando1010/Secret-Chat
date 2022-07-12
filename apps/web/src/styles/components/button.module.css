@@ -1,0 +1,38 @@
+.button {
+    padding: 10px 25px;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    text-decoration: none;
+    font-weight: 600;
+    outline: none;
+}
+
+.light {
+    background-color: var(--light-1);
+    color: var(--light-2);
+}
+
+.light:hover, .light:focus {
+    border: 1px solid var(--light-2);
+}
+
+
+.primary {
+    background-color: var(--primary-1);
+    color: var(--primary-2);
+}
+
+.primary:hover, .primary:focus {
+    border: 1px solid var(--primary-2);
+}
+
+.success {
+    background-color: var(--success-1);
+    color: var(--success-2);
+}
+
+.success:hover, .success:focus {
+    border: 1px solid var(--success-2);
+}

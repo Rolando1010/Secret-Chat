@@ -1,0 +1,92 @@
+.conversationsBar {
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 15px;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.conversationsBar h3{
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.conversationsList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.conversationsList li {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 15px;
+    color: var(--font-1);
+}
+
+.conversationsList li:hover {
+    background-color: var(--background-1);
+}
+
+.conversationsList div {
+    display: inline-block;
+}
+
+.conversationsList p {
+    margin: 0;
+}
+
+.conversationName {
+    font-size: 16px;
+}
+
+.conversationAdministrator {
+    font-size: 12px;
+    color: var(--font-2);
+}
+
+.conversationPanel label {
+    position: relative;
+}
+
+.conversationPanel input {
+    border-color: transparent;
+    outline: none;
+    color: var(--font-1);
+    margin-bottom: 20px;
+    font-size: 14px;
+    background-color: var(--background-1);
+    border-radius: 15px;
+    padding: 5px 25px 5px 15px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.conversationPanel i {
+    position: absolute;
+    right: 6px;
+    top: 3px;
+}
+
+.conversationPanel button {
+    background-color: var(--secondary-1);
+    color: var(--secondary-2);
+    border: 1px solid transparent;
+    padding: 15px 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+}
+
+.conversationPanel button:hover, .conversationPanel button:focus {
+    border: 1px solid var(--secondary-2);
+}
+
+.joinConversationForm {
+    text-align: center;
+}
