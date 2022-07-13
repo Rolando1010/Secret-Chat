@@ -13,7 +13,7 @@ const Menu = () => {
         <header className={styles.menu}>
             <section className={styles.siteLink}>
                 <Link to="/">
-                    <img src="https://cdn-icons-png.flaticon.com/512/7118/7118737.png"/>
+                    <img src="/img/icon.png"/>
                     <h2>Secret Chat</h2>
                 </Link>
             </section>

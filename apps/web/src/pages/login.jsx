@@ -9,7 +9,7 @@ const Login = () => {
             submit={login}
             title="Inicia sesión y ten conversaciones secretas con tus amigos"
             buttonText="Iniciar Sesión"
-            image="https://cdn-icons-png.flaticon.com/512/767/767403.png"
+            image="/img/login.png"
         />
     );
 }

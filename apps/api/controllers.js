@@ -7,6 +7,7 @@ const {
     getConversationAdministrator
 } = require("./models/conversation");
 const { setAuth, getAuth } = require("../auth");
+const isRequestAuthenticated = require("../auth/isRequestAuthenticated");
 
 const register = async (request, response) => {
     const { username, password } = request.body;
@@ -25,10 +26,9 @@ const login = async (request, response) => {
     });
 }
 
-const basicDataUser = async (request, response) => {
-    const authtoken = getAuth(request);
-    const user = await getBasicDataUserByAuthtoken(authtoken);
-    return response.json({ userdata: user });
+const auth = async (request, response) => {
+    const authVerification = await isRequestAuthenticated(request);
+    return response.json(authVerification);
 }
 
 const joinConversation = async (request, response) => {
@@ -65,7 +65,7 @@ const administratorConversation = async (request, response) => {
 module.exports = {
     register,
     login,
-    basicDataUser,
+    auth,
     joinConversation,
     conversationsUser,
     accesstokenUser,

@@ -1,10 +1,8 @@
-const { getAuth } = require(".");
-const { getBasicDataUserByAuthtoken } = require("../api/models/user");
+const isRequestAuthenticated = require("./isRequestAuthenticated");
 
 const authentication = async (request, response, next) => {
-    const authtoken = getAuth(request);
-    const user = await getBasicDataUserByAuthtoken(authtoken);
-    if(user) return next();
+    const authVerification = isRequestAuthenticated(request);
+    if(authVerification.isAuth) return next();
     return response.redirect("/inicio-sesion");
 }
 
