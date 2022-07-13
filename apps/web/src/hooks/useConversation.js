@@ -87,6 +87,13 @@ const useConversation = () => {
         });
     }
 
+    const quitActualConversation = () => {
+        const actualConversation = globalState.conversation?.conversation;
+        actualConversation?.removeAllListeners();
+        const {conversation, ...actualGlobalState} = globalState;
+        setGlobalState(actualGlobalState);
+    }
+
     return {
         updateGlobalConversation,
         joinConversation,
@@ -94,7 +101,8 @@ const useConversation = () => {
         updateConversation,
         getMessagesConversation,
         sendMessage,
-        getParticipantsConversation
+        getParticipantsConversation,
+        quitActualConversation
     }
 }
 

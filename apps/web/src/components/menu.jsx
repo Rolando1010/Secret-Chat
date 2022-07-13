@@ -5,14 +5,17 @@ import styles from "../styles/components/menu.module.css";
 import Dropdown from "./dropdown";
 import { getUserAvatar } from "../services/avatar";
 import Avatar from "./avatar";
+import useConversation from "../hooks/useConversation";
 
 const Menu = () => {
     const { globalState } = useGlobalState();
+    const { quitActualConversation } = useConversation();
+
 
     return(
         <header className={styles.menu}>
             <section className={styles.siteLink}>
-                <Link to="/">
+                <Link to="/" onClick={quitActualConversation}>
                     <img src="/img/icon.png"/>
                     <h2>Secret Chat</h2>
                 </Link>

@@ -1,20 +1,24 @@
-import { useMemo } from "react";
+import { useCallback, useMemo } from "react";
 import styles from "../../styles/pages/conversations.module.css";
 import useGlobalState from "../../hooks/useGlobalState";
 
-const Message = ({ body, author }) => {
+const Message = ({ body, author, dateCreated }) => {
     const { globalState } = useGlobalState();
 
-    const isMyMessage = useMemo(() => globalState.auth.userdata.username === author, [author]);
+    const isMyMessage = useMemo(() => globalState.auth.userdata.username === author, []);
+    const formatDate = useCallback((date) => date.toLocaleString().replace(",", "").slice(0, -3), []);
 
     return (
         <section
             className={`${styles.messageContainer} ${isMyMessage ? styles.myMessage : ""}`}
         >
-            <div>
+            <article className={styles.message}>
                 <p>{body}</p>
-                <small>{author}</small>
-            </div>
+                <div>
+                    <small>{author}</small>
+                    <small>{formatDate(dateCreated)}</small>
+                </div>
+            </article>
         </section>
     );
 }

@@ -41,11 +41,11 @@
     align-items: flex-end;
 }
 
-.myMessage.messageContainer div {
+.myMessage .message {
     background-color: #342848;
 }
 
-.messageContainer div{
+.message {
     width: 50%;
     background-color: var(--background-1);
     box-sizing: border-box;
@@ -57,13 +57,15 @@
 .messageContainer p{
     margin: 0;
     white-space: pre-wrap;
+    word-break: break-word;
+    margin-bottom: 10px;
 }
 
-.messageContainer small {
+.messageContainer div {
     color: var(--font-2);
     font-weight: bold;
-    text-align: right;
-    display: block;
+    display: flex;
+    justify-content: space-between;
 }
 
 .messageInputForm {

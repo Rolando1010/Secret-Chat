@@ -42,8 +42,13 @@ const Messages = () => {
                     subject="mensajes"
                 />
                 :
-                messages.map(({ body, author }, index) =>
-                    <Message key={`message-${index}`} body={body} author={author}/>
+                messages.map(({ body, author, dateCreated }, index) =>
+                    <Message
+                        key={`message-${index}`}
+                        body={body}
+                        author={author}
+                        dateCreated={dateCreated}
+                    />
                 )
             }
         </div>
