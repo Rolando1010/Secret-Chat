@@ -36,7 +36,7 @@ const Messages = () => {
 
     return (
         <div className={styles.messagesContainer} ref={scrollRef}>
-            {globalState?.loadingMessages ?
+            {globalState?.loading?.messages ?
                 <LoadingScreen
                     loader={Hash}
                     subject="mensajes"

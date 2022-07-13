@@ -32,12 +32,12 @@ const useConversation = () => {
     }
 
     const updateConversation = async (conversationName) => {
-        if(!globalState.loadingMessages){
+        if(!globalState.loading?.messages){
             const { conversation } = globalState;
             const actualConversation = conversation?.conversation;
             if(conversation?.conversationName !== conversationName){
                 actualConversation?.removeAllListeners();
-                setGlobalState({...globalState, loadingMessages: true, loadingParticipants: true});
+                setGlobalState({...globalState, loading: {messages: true, participants: true}});
                 getMyConversation(conversationName)
                 .then(fetchedConversation => {
                     updateGlobalConversation({ conversationName, conversation: fetchedConversation });
@@ -64,7 +64,7 @@ const useConversation = () => {
         const { conversation } = globalState.conversation;
         let messages = (await conversation.getMessages()).items;
         setMessages(messages);
-        setGlobalState({...globalState, loadingMessages: false});
+        setGlobalState({...globalState, loading: {...globalState.loading, messages: false}});
 		conversation.on("messageAdded", message => {
             messages = [...messages, message];
             setMessages(messages);
@@ -80,7 +80,7 @@ const useConversation = () => {
         const { conversation } = globalState.conversation;
         let participants = await conversation.getParticipants();
         setParticipants(participants);
-        setGlobalState({...globalState, loadingParticipants: false});
+        setGlobalState({...globalState, loading: {...globalState.loading, participants: false}});
         conversation.on('participantJoined', participant => {
             participants = [participant, ...participants];
             setParticipants(participants);

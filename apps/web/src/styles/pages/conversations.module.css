@@ -72,10 +72,18 @@
     box-sizing: border-box;
     padding: 15px;
     text-align: center;
+    position: relative;
 }
 
-.messageInputForm input{
+.inputContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
+    margin-bottom: 15px;
+}
+
+.inputContainer input{
     box-sizing: border-box;
     outline: none;
     padding: 15px;
@@ -84,7 +92,24 @@
     border-color: transparent;
     color: var(--font-1);
     background-color: var(--font-2);
-    margin-bottom: 5px;
+    flex-grow: 1;
+}
+
+.inputContainer i {
+    font-size: 35px;
+    margin-left: 10px;
+}
+
+.emojisContainer {
+    position: absolute;
+    right: 0;
+    display: none;
+}
+
+.inputContainer i:hover .emojisContainer{
+    color: red;
+    display: block;
+    height: 0;
 }
 
 .participantsList {

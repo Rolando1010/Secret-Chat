@@ -33,7 +33,7 @@ const ConversationDetail = () => {
             </button>
         </header>
         <Modal modalRef={modalRef} title="Detalle de conversación">
-            {globalState?.loadingParticipants ?
+            {globalState?.loading?.participants ?
                 <LoadingScreen
                     loader={Circle}
                     subject="participantes"
