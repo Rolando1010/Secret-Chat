@@ -27,6 +27,10 @@
     color: var(--font-1);
 }
 
+.conversationsList li.active {
+    background-color: var(--background-1);
+}
+
 .conversationsList li:hover {
     background-color: var(--background-1);
 }

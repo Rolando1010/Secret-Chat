@@ -6,6 +6,7 @@ const useGlobalState = () => {
     const { globalState, setGlobalState } = useContext(context) || {};
 
     const startGlobalState = async (externalSetGlobalState) => {
+        (setGlobalState || externalSetGlobalState)(null);
         const auth = await request.get("/api/auth");
         (setGlobalState || externalSetGlobalState)({ auth });
     }
