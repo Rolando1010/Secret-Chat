@@ -1,0 +1,17 @@
+body {
+    font-family: Noto Sans;
+    color: var(--font-1);
+    margin: 0;
+    background-color: var(--background);
+    overflow-y: auto;
+}
+
+*::-webkit-scrollbar{
+    background: var(--background-image-container);
+    width: 6px;
+    border-radius: .5rem;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2);
+}

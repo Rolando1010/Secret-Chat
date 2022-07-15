@@ -4,7 +4,7 @@ import { createRoot } from 'react-dom/client';
 import Routes from "./routes";
 import context from './context';
 import useGlobalState from './hooks/useGlobalState';
-import "./styles/app.css";
+import "./styles/app.module.css";
 import Menu from './components/menu';
 import useTheme from './hooks/useTheme';
 

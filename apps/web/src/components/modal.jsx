@@ -7,11 +7,11 @@ const Modal = ({ modalRef = {}, title, footer, children }) => {
     
     const open = () => {
         setIsOpen(true)
-        document.querySelector("#root").style.overflowY = "initial";
+        document.body.style.overflowY = "hidden";
     }
 
     const close = () => {
-        document.querySelector("#root").style.overflowY = "auto";
+        document.body.style.overflowY = "auto";
         setIsOpen(false);
     }
 

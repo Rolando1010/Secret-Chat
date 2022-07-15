@@ -33,6 +33,7 @@
     font-weight: bold;
     margin: 0 10px;
     cursor: pointer;
+    word-break: break-all;
 }
 
 .accountLinks a:visited {
@@ -52,7 +53,7 @@
 }
 
 .switch {
-    margin-right: 15px;
+    margin: 0 10px;
     border: 1px solid var(--border);
 }
 

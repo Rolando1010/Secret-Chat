@@ -7,7 +7,7 @@
 .dropdownContent {
     display: none;
     position: absolute;
-    background-color: var(--background-7);
+    background-color: var(--background-dropdown);
     transform: translate(-87px, 72px);
     min-width: 150px;
     z-index: 1;
@@ -31,5 +31,5 @@
 }
 
 .dropdownContent li:hover {
-    background: var(--background-8);
+    background: var(--background-hover-option-dropdown);
 }

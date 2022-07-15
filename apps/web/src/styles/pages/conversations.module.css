@@ -25,14 +25,15 @@
 }
 
 .conversationHeader button:hover, .conversationHeader button:focus {
-    color: var(--background-6);
+    color: var(--background-hover-info-chat);
 }
 
 .messagesContainer {
     overflow-y: auto;
     max-height: 300px;
+    min-height: 120px;
     padding: 15px;
-    background-color: var(--background-2);
+    background-color: var(--background-messages-container);
 }
 
 .myMessage {
@@ -42,7 +43,7 @@
 }
 
 .myMessage .message {
-    background-color: var(--background-3);
+    background-color: var(--background-my-message);
 }
 
 .message {

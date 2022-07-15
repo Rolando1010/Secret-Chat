@@ -30,8 +30,7 @@ const Messages = () => {
     
     useEffect(() => {
         scrollRef.current?.scrollTo(0, scrollRef.current?.scrollHeight);
-        const root = document.querySelector("#root");
-        root.scrollTo(0, root.scrollHeight);
+        window.scrollTo(0, document.body.scrollHeight);
     }, [messages]);
 
     return (

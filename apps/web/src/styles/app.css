@@ -1,7 +1,0 @@
-body {
-    font-family: Noto Sans;
-    color: var(--font-1);
-    margin: 0;
-    background-color: var(--background);
-    overflow-y: auto;
-}
