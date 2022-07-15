@@ -27,12 +27,3 @@
 .primary:hover, .primary:focus {
     border: 1px solid var(--primary-2);
 }
-
-.success {
-    background-color: var(--success-1);
-    color: var(--success-2);
-}
-
-.success:hover, .success:focus {
-    border: 1px solid var(--success-2);
-}

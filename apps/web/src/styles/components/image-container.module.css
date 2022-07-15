@@ -4,7 +4,7 @@
 }
 
 .imageBackground {
-    background-color: #272a37;
+    background-color: var(--background-4);
     display: inline-block;
     border-radius: 100%;
     padding: 30px;

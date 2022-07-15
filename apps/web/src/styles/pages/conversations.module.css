@@ -25,14 +25,14 @@
 }
 
 .conversationHeader button:hover, .conversationHeader button:focus {
-    color: #463661;
+    color: var(--background-6);
 }
 
 .messagesContainer {
     overflow-y: auto;
     max-height: 300px;
     padding: 15px;
-    background-color: #171c2b;
+    background-color: var(--background-2);
 }
 
 .myMessage {
@@ -42,7 +42,7 @@
 }
 
 .myMessage .message {
-    background-color: #342848;
+    background-color: var(--background-3);
 }
 
 .message {
@@ -98,6 +98,7 @@
 .inputContainer i {
     font-size: 35px;
     margin-left: 10px;
+    color: var(--font-2);
 }
 
 .emojisContainer {
@@ -130,4 +131,10 @@
     padding: 15px;
     box-sizing: border-box;
     border-bottom: 1px solid var(--border);    
+}
+
+@media (max-width: 450px){
+    .messageContainer div{
+        flex-direction: column;
+    }
 }

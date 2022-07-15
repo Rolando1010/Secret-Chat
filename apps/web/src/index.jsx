@@ -6,13 +6,18 @@ import context from './context';
 import useGlobalState from './hooks/useGlobalState';
 import "./styles/app.css";
 import Menu from './components/menu';
+import useTheme from './hooks/useTheme';
 
 const App = () => {
     const { startGlobalState } = useGlobalState();
+    const { setInitialTheme } = useTheme();
     const [globalState, setGlobalState] = useState();
     const valueGlobalState = useMemo(() => ({ globalState, setGlobalState }), [globalState]);
 
-    useEffect(() => { startGlobalState(setGlobalState); }, []);
+    useEffect(() => {
+        startGlobalState(setGlobalState);
+        setInitialTheme();
+    }, []);
 
     return (
         <context.Provider value={valueGlobalState}>
@@ -24,4 +29,4 @@ const App = () => {
     );
 }
 
-createRoot(document.getElementById('root')).render(<App />);
+createRoot(document.getElementById('root')).render(<App/>);

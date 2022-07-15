@@ -13,11 +13,13 @@
   "dependencies": {
     "@twilio/conversations": "^2.1.0",
     "bcryptjs": "^2.4.3",
+    "cookies-next": "^2.1.1",
     "dotenv": "^16.0.1",
     "ejs": "^3.1.8",
     "emoji-picker-react": "^3.5.1",
     "express": "^4.18.1",
     "react-spinners": "^0.13.3",
+    "react-switch": "^7.0.0",
     "sequelize": "^6.21.2",
     "sqlite3": "^5.0.8",
     "twilio": "^3.78.0",

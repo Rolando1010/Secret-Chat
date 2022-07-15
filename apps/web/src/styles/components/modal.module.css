@@ -12,7 +12,7 @@
 }
 
 .modal section {
-    background-color: #111421;
+    background-color: var(--background-5);
     width: 80%;
     max-width: 700px;
     max-height: 90%;
