@@ -8,4 +8,6 @@ const isRequestAuthenticated = async (request) => {
     return { userdata: { username: user.username }, isAuth: true };
 }
 
-module.exports = isRequestAuthenticated;
+module.exports = {
+    isRequestAuthenticated
+};

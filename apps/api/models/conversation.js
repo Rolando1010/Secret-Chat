@@ -66,10 +66,22 @@ const getConversationAdministrator = async (conversationName) => {
     return administrator.username;
 }
 
+const getUserInConversation = async (authtoken, conversationName) => {
+    const user = await getUserByAuthtoken(authtoken);
+    const conversation = await Conversation.findOne({where: {name: conversationName}});
+    if(!conversation) return conversation;
+    const userInConversation = await UsersInConversation.findOne({where: {
+        userId: user.id,
+        conversationId: conversation.id
+    }});
+    return userInConversation;
+}
+
 module.exports = {
     joinUserToConversation,
     conversationsUserByAuthtoken,
     accesstokenUserByAuthtoken,
     getMembersConversationByName,
-    getConversationAdministrator
+    getConversationAdministrator,
+    getUserInConversation
 }

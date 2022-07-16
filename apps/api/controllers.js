@@ -7,7 +7,7 @@ const {
     getConversationAdministrator
 } = require("./models/conversation");
 const { setAuth, getAuth } = require("../auth");
-const isRequestAuthenticated = require("../auth/isRequestAuthenticated");
+const { isRequestAuthenticated } = require("../auth/verifications");
 
 const register = async (request, response) => {
     const { username, password } = request.body;

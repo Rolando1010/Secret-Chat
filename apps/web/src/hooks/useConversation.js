@@ -88,6 +88,7 @@ const useConversation = () => {
     }
 
     const quitActualConversation = () => {
+        if(!globalState) return;
         const actualConversation = globalState.conversation?.conversation;
         actualConversation?.removeAllListeners();
         const {conversation, ...actualGlobalState} = globalState;
