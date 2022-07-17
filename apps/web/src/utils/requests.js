@@ -5,7 +5,10 @@ const request = (url, body = {}, method = "GET", headers = {}) => {
             headers: {...headers, "Content-Type": "application/json"},
             body: body ? JSON.stringify(body) : null
         }).then(response => response.json())
-        .then(resolve);
+        .then(resolve)
+        .catch(() => {
+            console.error(`request error in: ${url}`);
+        });
     });
 }
 
