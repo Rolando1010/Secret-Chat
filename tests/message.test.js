@@ -63,7 +63,7 @@ describe("Message Test", () => {
         cy.get(".GXUD9aVbcORyqwM57X1n").last().contains(message2);
     });
     
-    it("open emoji picker", () => {
+    it("open emojis", () => {
         cy.get(".wcDaQ784LSsVfCK94Eks i").realHover();
         cy.get(".emoji-picker-react").should("exist");
     });

@@ -1,3 +1,5 @@
 /node_modules
 .env
 db.sqlite
+/cypress/*
+!/cypress/support/e2e.js
