@@ -24,6 +24,7 @@
 * React + Webpack
 * CSS Modules
 * Sequelize + SQLite
+* Cypress
 * Twilio
 * Font awesome
 * Railway
@@ -74,4 +75,10 @@ npm run web
 
 # Genera el empaquetado de react para producción
 npm run web-build
+
+# Ejecutar los test de cypress en la terminal
+npm run test
+
+# Ejecutar los test de cypress en su interfaz de usuario
+npm run test:ui
 ```

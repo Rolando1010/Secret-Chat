@@ -109,7 +109,6 @@
 }
 
 .inputContainer i:hover .emojisContainer{
-    color: red;
     display: block;
     height: 0;
 }
