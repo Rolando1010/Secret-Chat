@@ -15,11 +15,14 @@ describe("Theme Test", () => {
         cy.get("body").should("have.css", "background-color", hexToRgb(dark.background));
         cy.get(".c1kgvJ6bi14vynbRSA8b").click();
         cy.get("body").should("have.css", "background-color", hexToRgb(light.background));
+    });
+
+    it("persist theme to page change", () => {
+        cy.visit("/inicio-sesion");
+        cy.get("body").should("have.css", "background-color", hexToRgb(dark.background));
+        cy.get(".c1kgvJ6bi14vynbRSA8b").click();
+        cy.get("body").should("have.css", "background-color", hexToRgb(light.background));
         cy.visit("/inicio-sesion");
         cy.get("body").should("have.css", "background-color", hexToRgb(light.background));
-        cy.get(".c1kgvJ6bi14vynbRSA8b").click();
-        cy.get("body").should("have.css", "background-color", hexToRgb(dark.background));
-        cy.visit("/inicio-sesion");
-        cy.get("body").should("have.css", "background-color", hexToRgb(dark.background));
     });
 });
