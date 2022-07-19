@@ -7,7 +7,7 @@
     "start": "node apps",
     "dev": "nodemon apps",
     "web": "webpack --config ./apps/web/webpack.config --mode development --watch",
-    "web-build": "webpack --config ./apps/web/webpack.config --mode production",
+    "web:build": "webpack --config ./apps/web/webpack.config --mode production",
     "test": "cypress run",
     "test:ui": "cypress open"
   },

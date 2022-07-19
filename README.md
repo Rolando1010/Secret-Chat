@@ -74,7 +74,7 @@ npm run dev
 npm run web
 
 # Genera el empaquetado de react para producción
-npm run web-build
+npm run web:build
 
 # Ejecutar los test de cypress en la terminal
 npm run test
