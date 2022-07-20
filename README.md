@@ -67,6 +67,9 @@ npm start
 
 Tienes otros comandos a disposición para realizar otras actividades
 ```bash
+# Ejecutar el proyecto
+npm start
+
 # El proyecto se ejecuta en modo desarrollo y cada vez que realices un cambio en un archivo el servidor se reinicia
 npm run dev
 
@@ -77,7 +80,7 @@ npm run web
 npm run web:build
 
 # Ejecutar los test de cypress en la terminal
-npm run test
+npm test
 
 # Ejecutar los test de cypress en su interfaz de usuario
 npm run test:ui
