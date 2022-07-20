@@ -5,7 +5,7 @@ import useGlobalState from "../../hooks/useGlobalState";
 const Message = ({ body, author, dateCreated }) => {
     const { globalState } = useGlobalState();
 
-    const isMyMessage = useMemo(() => globalState.auth.userdata.username === author, []);
+    const isMyMessage = globalState.auth.userdata.username === author;
     const formatDate = useCallback((date) => date.toLocaleString().replace(",", "").slice(0, -3), []);
 
     return (
